@@ -3,23 +3,23 @@ def busqueda():
     valor_max = len(num_primos) - 1
     
 
-    while valor_max <= valor_min:
+    while  valor_min <= valor_max:
         valor_adivinado = (valor_max + valor_min)//2
-        if valor_adivinado == objetivo:
+        if num_primos[valor_adivinado] == objetivo:
             return valor_adivinado
-        elif valor_adivinado < objetivo:
+        elif num_primos[valor_adivinado] < objetivo:
             valor_min = valor_adivinado + 1
-        elif valor_adivinado > objetivo:
+        else: #valor_adivinado > objetivo
             valor_max = valor_adivinado - 1 
     return -1
 
 num_primos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
-objetivo = 37
+objetivo = 2
 resultado = busqueda()
 if resultado != -1:
-    print(f'{objetivo} está en la lista, en el índice {resultado}')
+    print(f'El numero está en la lista')
 else:
-    print(f'El objetivo {objetivo} no está en la lista')
+    print(f'El numero no está en la lista')
 
 
 # Pseucodigo
