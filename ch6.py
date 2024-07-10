@@ -18,9 +18,9 @@ def insert(nodo,valor):
 
 def inorder(nodo): #Este tipo de recorrido visita los nodos del árbol en un orden ascendente, de menor a mayor valor.
     if nodo:
-        inorder(nodo.izquierda)
-        print(nodo.valor, end=" ")
-        inorder(nodo.derecha)
+        inorder(nodo.izquierda)  # Recorre el subárbol izquierdo
+        print(nodo.valor)  # Visita el nodo actual
+        inorder(nodo.derecha) #Recorre el subárbol izquierdo
         
 if __name__ == '__main__':
  
