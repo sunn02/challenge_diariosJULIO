@@ -1,4 +1,7 @@
 
+def hacer_sonido(animal):
+    animal.hacer_sonido()
+
 class Animal():
     def hacer_sonido(self):
         print("Cada animal realiza un sonido distinto")
@@ -7,8 +10,6 @@ class Perro(Animal):
     def hacer_sonido(self):
         print("Guau!")
 
-animal = Animal()
 perro = Perro()
+hacer_sonido(perro)
 
-animal.hacer_sonido()
-perro.hacer_sonido()    
